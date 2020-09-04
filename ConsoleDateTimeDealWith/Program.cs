@@ -77,5 +77,25 @@ namespace ConsoleDateTimeDealWith
         {
             return new TimeSpan(dateTo.Ticks - dateFrom.Ticks).TotalMilliseconds;
         }
+
+        /// <summary>
+        /// 取得yyyyMMddHHmmss
+        /// </summary>
+        /// <param name="datetime"></param>
+        /// <returns></returns>
+        public string GetDateTimeString_yyyyMMddHHmmss(DateTime datetime)
+        {
+            return datetime.ToString("yyyyMMddHHmmss");
+        }
+
+        /// <summary>
+        /// 取得yyyyMMdd
+        /// </summary>
+        /// <param name="datetime"></param>
+        /// <returns></returns>
+        public string GetDateTimeString_yyyyMMdd(DateTime datetime)
+        {
+            return datetime.ToString("yyyyMMdd");
+        }
     }
 }

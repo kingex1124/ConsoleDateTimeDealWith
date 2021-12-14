@@ -97,5 +97,26 @@ namespace ConsoleDateTimeDealWith
         {
             return datetime.ToString("yyyyMMdd");
         }
+
+        /// <summary>
+        /// 透過字串 轉型成日期格式
+        /// </summary>
+        /// <param name="dateStr"></param>
+        /// <returns></returns>
+        public DateTime StringConvertToDateTime(string dateStr)
+        {
+            return StringConvertToDateTimeByFormat(dateStr, "yyyyMMdd");
+        }
+
+        /// <summary>
+        /// 透過字串 格式 轉型成日期格式
+        /// </summary>
+        /// <param name="dateStr"></param>
+        /// <param name="format"></param>
+        /// <returns></returns>
+        public DateTime StringConvertToDateTimeByFormat(string dateStr,string format)
+        {
+            return DateTime.ParseExact(dateStr, format, null, System.Globalization.DateTimeStyles.AllowWhiteSpaces);
+        }
     }
 }

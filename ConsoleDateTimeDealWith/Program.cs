@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,10 @@ namespace ConsoleDateTimeDealWith
     {
         static void Main(string[] args)
         {
+            string date = "20220527";
+
+            DateTime result;
+            var check = DateTime.TryParseExact(date,"yyyyMMdd", new CultureInfo("zh-TW"), DateTimeStyles.None , out result);
         }
 
         /// <summary>
